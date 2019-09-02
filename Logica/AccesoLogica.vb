@@ -3175,6 +3175,7 @@ Public Class AccesoLogica
 
         Return _Tabla
     End Function
+    'Buscar Stock por lote segun un criterio de busqueda
     Public Shared Function L_fnBuscarStockLote(_valor1 As String, _laboratorio As Boolean, _valor2 As String, _fechaVenc As Boolean) As DataTable
         Dim _Tabla As DataTable
         Dim sb As New StringBuilder
@@ -4827,6 +4828,18 @@ Public Class AccesoLogica
         Dim _listParam As New List(Of Datos.DParametro)
 
         _listParam.Add(New Datos.DParametro("@tipo", 4))
+        _listParam.Add(New Datos.DParametro("@yduact", L_Usuario))
+        _listParam.Add(New Datos.DParametro("@linea", numiLinea))
+        _Tabla = D_ProcedimientoConParam("sp_Mam_SaldosProducto", _listParam)
+
+        Return _Tabla
+    End Function
+    Public Shared Function L_fnTodosAlmacenUnaLineasStockDisct0(numiLinea As Integer) As DataTable
+        Dim _Tabla As DataTable
+
+        Dim _listParam As New List(Of Datos.DParametro)
+
+        _listParam.Add(New Datos.DParametro("@tipo", 441))
         _listParam.Add(New Datos.DParametro("@yduact", L_Usuario))
         _listParam.Add(New Datos.DParametro("@linea", numiLinea))
         _Tabla = D_ProcedimientoConParam("sp_Mam_SaldosProducto", _listParam)

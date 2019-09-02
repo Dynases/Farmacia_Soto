@@ -34,9 +34,9 @@ Partial Class PR_StockActualProductosLotes
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.chbTodos = New DevComponents.DotNetBar.Controls.CheckBoxX()
         Me.CheckBoxX2 = New DevComponents.DotNetBar.Controls.CheckBoxX()
-        Me.tbValor = New DevComponents.Editors.DoubleInput()
-        Me.SymbolBox1 = New DevComponents.DotNetBar.Controls.SymbolBox()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.txtValor = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.LabelX3 = New DevComponents.DotNetBar.LabelX()
         CType(Me.SuperTabPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuperTabPrincipal.SuspendLayout()
         Me.SuperTabControlPanelRegistro.SuspendLayout()
@@ -54,7 +54,6 @@ Partial Class PR_StockActualProductosLotes
         Me.Panel2.SuspendLayout()
         CType(Me.cbGrupos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        CType(Me.tbValor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SuperTabPrincipal
@@ -134,6 +133,9 @@ Partial Class PR_StockActualProductosLotes
         Me.BubbleBarUsuario.MouseOverTabColors.BorderColor = System.Drawing.SystemColors.Highlight
         Me.BubbleBarUsuario.SelectedTabColors.BorderColor = System.Drawing.Color.Black
         '
+        'btnSalir
+        '
+        '
         'btnGenerar
         '
         '
@@ -151,8 +153,8 @@ Partial Class PR_StockActualProductosLotes
         '
         'MGPFiltros
         '
-        Me.MGPFiltros.Controls.Add(Me.SymbolBox1)
-        Me.MGPFiltros.Controls.Add(Me.tbValor)
+        Me.MGPFiltros.Controls.Add(Me.LabelX3)
+        Me.MGPFiltros.Controls.Add(Me.txtValor)
         Me.MGPFiltros.Controls.Add(Me.Panel1)
         Me.MGPFiltros.Controls.Add(Me.LabelX2)
         Me.MGPFiltros.Controls.Add(Me.Panel2)
@@ -198,7 +200,7 @@ Partial Class PR_StockActualProductosLotes
         '
         Me.Panel2.Controls.Add(Me.checkTodosGrupos)
         Me.Panel2.Controls.Add(Me.checkUnaGrupo)
-        Me.Panel2.Location = New System.Drawing.Point(215, 47)
+        Me.Panel2.Location = New System.Drawing.Point(200, 47)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(119, 35)
@@ -245,7 +247,7 @@ Partial Class PR_StockActualProductosLotes
         Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX1.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.LabelX1.Location = New System.Drawing.Point(23, 36)
+        Me.LabelX1.Location = New System.Drawing.Point(7, 36)
         Me.LabelX1.Name = "LabelX1"
         Me.LabelX1.SingleLineColor = System.Drawing.SystemColors.Control
         Me.LabelX1.Size = New System.Drawing.Size(82, 16)
@@ -259,7 +261,7 @@ Partial Class PR_StockActualProductosLotes
         Me.cbGrupos.DesignTimeLayout = cbGrupos_DesignTimeLayout
         Me.cbGrupos.DisabledBackColor = System.Drawing.Color.White
         Me.cbGrupos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbGrupos.Location = New System.Drawing.Point(22, 58)
+        Me.cbGrupos.Location = New System.Drawing.Point(6, 58)
         Me.cbGrupos.Name = "cbGrupos"
         Me.cbGrupos.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.cbGrupos.Office2007CustomColor = System.Drawing.Color.DodgerBlue
@@ -279,18 +281,18 @@ Partial Class PR_StockActualProductosLotes
         Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX2.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.LabelX2.Location = New System.Drawing.Point(23, 123)
+        Me.LabelX2.Location = New System.Drawing.Point(6, 122)
         Me.LabelX2.Name = "LabelX2"
         Me.LabelX2.SingleLineColor = System.Drawing.SystemColors.Control
-        Me.LabelX2.Size = New System.Drawing.Size(143, 16)
+        Me.LabelX2.Size = New System.Drawing.Size(125, 16)
         Me.LabelX2.TabIndex = 260
-        Me.LabelX2.Text = "Fecha de Vencimiento:"
+        Me.LabelX2.Text = "Fecha Vencimiento:"
         '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.chbTodos)
         Me.Panel1.Controls.Add(Me.CheckBoxX2)
-        Me.Panel1.Location = New System.Drawing.Point(216, 153)
+        Me.Panel1.Location = New System.Drawing.Point(201, 113)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(119, 35)
@@ -308,10 +310,10 @@ Partial Class PR_StockActualProductosLotes
         Me.chbTodos.CheckValue = "Y"
         Me.chbTodos.Location = New System.Drawing.Point(60, 7)
         Me.chbTodos.Name = "chbTodos"
-        Me.chbTodos.Size = New System.Drawing.Size(55, 23)
+        Me.chbTodos.Size = New System.Drawing.Size(44, 23)
         Me.chbTodos.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.chbTodos.TabIndex = 252
-        Me.chbTodos.Text = "Todos"
+        Me.chbTodos.Text = "No"
         '
         'CheckBoxX2
         '
@@ -325,47 +327,43 @@ Partial Class PR_StockActualProductosLotes
         Me.CheckBoxX2.Size = New System.Drawing.Size(44, 23)
         Me.CheckBoxX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.CheckBoxX2.TabIndex = 251
-        Me.CheckBoxX2.Text = "Una"
-        '
-        'tbValor
-        '
-        '
-        '
-        '
-        Me.tbValor.BackgroundStyle.Class = "DateTimeInputBackground"
-        Me.tbValor.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.tbValor.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
-        Me.tbValor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tbValor.Increment = 1.0R
-        Me.tbValor.Location = New System.Drawing.Point(23, 160)
-        Me.tbValor.LockUpdateChecked = False
-        Me.tbValor.MinValue = 0R
-        Me.tbValor.Name = "tbValor"
-        Me.tbValor.Size = New System.Drawing.Size(89, 21)
-        Me.tbValor.TabIndex = 262
-        Me.tbValor.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right
-        '
-        'SymbolBox1
-        '
-        Me.SymbolBox1.BackColor = System.Drawing.Color.SteelBlue
-        Me.SymbolBox1.BackgroundImage = Global.DinoM.My.Resources.Resources._051_warning
-        Me.SymbolBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        '
-        '
-        '
-        Me.SymbolBox1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.SymbolBox1.Cursor = System.Windows.Forms.Cursors.Help
-        Me.SymbolBox1.Location = New System.Drawing.Point(168, 121)
-        Me.SymbolBox1.Name = "SymbolBox1"
-        Me.SymbolBox1.Size = New System.Drawing.Size(30, 23)
-        Me.SymbolBox1.Symbol = ""
-        Me.SymbolBox1.SymbolColor = System.Drawing.Color.Red
-        Me.SymbolBox1.TabIndex = 263
-        Me.SymbolBox1.Text = "SymbolBox1"
+        Me.CheckBoxX2.Text = "Si"
         '
         'ToolTip1
         '
         Me.ToolTip1.BackColor = System.Drawing.SystemColors.InactiveBorder
+        '
+        'txtValor
+        '
+        '
+        '
+        '
+        Me.txtValor.Border.Class = "TextBoxBorder"
+        Me.txtValor.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtValor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtValor.Location = New System.Drawing.Point(200, 165)
+        Me.txtValor.Name = "txtValor"
+        Me.txtValor.PreventEnterBeep = True
+        Me.txtValor.Size = New System.Drawing.Size(100, 22)
+        Me.txtValor.TabIndex = 263
+        Me.txtValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'LabelX3
+        '
+        Me.LabelX3.AutoSize = True
+        Me.LabelX3.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX3.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.LabelX3.Location = New System.Drawing.Point(6, 165)
+        Me.LabelX3.Name = "LabelX3"
+        Me.LabelX3.SingleLineColor = System.Drawing.SystemColors.Control
+        Me.LabelX3.Size = New System.Drawing.Size(151, 16)
+        Me.LabelX3.TabIndex = 264
+        Me.LabelX3.Text = "Mayor o igual en (Días):"
         '
         'PR_StockActualProductosLotes
         '
@@ -395,7 +393,6 @@ Partial Class PR_StockActualProductosLotes
         Me.Panel2.ResumeLayout(False)
         CType(Me.cbGrupos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
-        CType(Me.tbValor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -409,7 +406,7 @@ Partial Class PR_StockActualProductosLotes
     Friend WithEvents chbTodos As DevComponents.DotNetBar.Controls.CheckBoxX
     Friend WithEvents CheckBoxX2 As DevComponents.DotNetBar.Controls.CheckBoxX
     Friend WithEvents LabelX2 As DevComponents.DotNetBar.LabelX
-    Friend WithEvents SymbolBox1 As DevComponents.DotNetBar.Controls.SymbolBox
-    Friend WithEvents tbValor As DevComponents.Editors.DoubleInput
     Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents txtValor As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents LabelX3 As DevComponents.DotNetBar.LabelX
 End Class

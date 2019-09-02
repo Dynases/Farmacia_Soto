@@ -1,10 +1,12 @@
 ﻿Imports Logica.AccesoLogica
+Imports DevComponents.DotNetBar
 Public Class PR_StockActualProductosLotes
 
 #Region "Atributos"
 
     Private Titulo As String
     Private Tipo As Byte
+    Public _tab As SuperTabItem
 
     Public Property pTitulo() As String
         Get
@@ -46,11 +48,11 @@ Public Class PR_StockActualProductosLotes
 
     Private Sub CheckBoxX1_CheckValueChanged(sender As Object, e As EventArgs) Handles chbTodos.CheckValueChanged
         If (chbTodos.Checked) Then
-            tbValor.IsInputReadOnly = True
-            tbValor.ResetText()
+            txtValor.ReadOnly = True
+            txtValor.ResetText()
         Else
-            tbValor.IsInputReadOnly = False
-            tbValor.Select()
+            txtValor.ReadOnly = False
+            txtValor.Select()
         End If
     End Sub
 #End Region
@@ -63,16 +65,23 @@ Public Class PR_StockActualProductosLotes
         Me.Text = pTitulo
         _prCargarReporte()
         _prCargarComboGrupos(cbGrupos)
-        Me.ToolTip1.SetToolTip(SymbolBox1, "Permite consultar todos los productos que tengan una fecha de vencimiento proxima según el parámetro específicado")
-        Me.ToolTip1.IsBalloon = True
     End Sub
     Private Sub _prBuscar()
         Dim _dt As New DataTable
-        _dt = L_fnBuscarStockLote(cbGrupos.Value, checkTodosGrupos.Checked, tbValor.Value, chbTodos.Checked)
-        Dim objrep As New R_StockActualLote()
-        objrep.SetDataSource(_dt)
-        'MReportViewer
-        MReportViewer.ReportSource = objrep
+        _dt = L_fnBuscarStockLote(cbGrupos.Value, checkTodosGrupos.Checked, txtValor.Text, chbTodos.Checked)
+        If (_dt.Rows.Count > 0) Then
+            Dim objrep As New R_StockActualLote()
+            objrep.SetDataSource(_dt)
+            'MReportViewer
+            MReportViewer.ReportSource = objrep
+        Else
+            ToastNotification.Show(Me, "NO HAY DATOS PARA LOS PARAMETROS SELECCIONADOS..!!!",
+                                       My.Resources.INFORMATION, 2000,
+                                       eToastGlowColor.Blue,
+                                       eToastPosition.BottomLeft)
+            MReportViewer.ReportSource = Nothing
+        End If
+
     End Sub
     Private Sub _prCargarComboGrupos(mCombo As Janus.Windows.GridEX.EditControls.MultiColumnCombo)
         Dim dt As New DataTable
@@ -94,6 +103,8 @@ Public Class PR_StockActualProductosLotes
         End If
     End Sub
 
-
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+        _tab.Close()
+    End Sub
 #End Region
 End Class
