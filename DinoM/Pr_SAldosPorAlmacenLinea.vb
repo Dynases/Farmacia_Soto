@@ -88,8 +88,12 @@ Public Class Pr_SAldosPorAlmacenLinea
         If (checkUnaAlmacen.Checked And checkTodosGrupos.Checked And CheckMayorCero.Checked) Then
             _dt = L_fnUnaAlmacenTodosLineasMayorCero(cbAlmacen.Value)
         End If
-        If (checkUnaGrupo.Checked And CheckTodosAlmacen.Checked) Then
+        If (checkUnaGrupo.Checked And CheckTodosAlmacen.Checked And CheckTodos.Checked) Then
             _dt = L_fnTodosAlmacenUnaLineas(cbGrupos.Value)
+
+        End If
+        If (checkUnaGrupo.Checked And CheckTodosAlmacen.Checked And CheckMayorCero.Checked) Then
+            _dt = L_fnTodosAlmacenUnaLineasStockDisct0(cbGrupos.Value)
 
         End If
         If (checkUnaAlmacen.Checked And checkUnaGrupo.Checked And CheckTodos.Checked) Then

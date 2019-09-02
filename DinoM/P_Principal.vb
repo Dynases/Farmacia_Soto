@@ -790,6 +790,7 @@ Public Class P_Principal
         Ventana.Select()
         Dim frm As New PR_StockActualProductosLotes
         Dim tab3 As SuperTabItem = superTabControl3.CreateTab(frm.Text)
+        frm._tab = tab3
         Dim panel As Panel = P_Global._fnCrearPanelVentanas(frm)
         superTabControl3.SelectedTabIndex = superTabControl3.Tabs.Count - 1
         tab3.AttachedControl.Controls.Add(panel)
@@ -976,6 +977,10 @@ Public Class P_Principal
     End Sub
 
     Private Sub FP_VENTAS_Click(sender As Object, e As EventArgs) Handles FP_VENTAS.Click
+
+    End Sub
+
+    Private Sub SideNav1_Click(sender As Object, e As EventArgs) Handles SideNav1.Click
 
     End Sub
 
