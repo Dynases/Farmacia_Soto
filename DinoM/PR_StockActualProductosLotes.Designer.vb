@@ -22,7 +22,21 @@ Partial Class PR_StockActualProductosLotes
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PR_StockActualProductosLotes))
+        Dim cbGrupos_DesignTimeLayout As Janus.Windows.GridEX.GridEXLayout = New Janus.Windows.GridEX.GridEXLayout()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.checkTodosGrupos = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.checkUnaGrupo = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.LabelX1 = New DevComponents.DotNetBar.LabelX()
+        Me.cbGrupos = New Janus.Windows.GridEX.EditControls.MultiColumnCombo()
+        Me.LabelX2 = New DevComponents.DotNetBar.LabelX()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.chbTodos = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.CheckBoxX2 = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.tbValor = New DevComponents.Editors.DoubleInput()
+        Me.SymbolBox1 = New DevComponents.DotNetBar.Controls.SymbolBox()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.SuperTabPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuperTabPrincipal.SuspendLayout()
         Me.SuperTabControlPanelRegistro.SuspendLayout()
@@ -34,8 +48,13 @@ Partial Class PR_StockActualProductosLotes
         Me.PanelUsuario.SuspendLayout()
         Me.MPanelUserAct.SuspendLayout()
         CType(Me.MEP, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MGPFiltros.SuspendLayout()
         Me.PanelIzq.SuspendLayout()
         CType(Me.MPicture, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        CType(Me.cbGrupos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.tbValor, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SuperTabPrincipal
@@ -53,7 +72,7 @@ Partial Class PR_StockActualProductosLotes
         Me.SuperTabPrincipal.ControlBox.MenuBox.Name = ""
         Me.SuperTabPrincipal.ControlBox.Name = ""
         Me.SuperTabPrincipal.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabPrincipal.ControlBox.MenuBox, Me.SuperTabPrincipal.ControlBox.CloseBox})
-        Me.SuperTabPrincipal.Size = New System.Drawing.Size(767, 405)
+        Me.SuperTabPrincipal.Size = New System.Drawing.Size(767, 628)
         Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelBuscador, 0)
         Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelRegistro, 0)
         '
@@ -63,7 +82,7 @@ Partial Class PR_StockActualProductosLotes
         '
         'SuperTabControlPanelRegistro
         '
-        Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(735, 405)
+        Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(735, 628)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelInferior, 0)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelIzq, 0)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelPrincipal, 0)
@@ -81,7 +100,7 @@ Partial Class PR_StockActualProductosLotes
         '
         'PanelInferior
         '
-        Me.PanelInferior.Location = New System.Drawing.Point(0, 369)
+        Me.PanelInferior.Location = New System.Drawing.Point(0, 592)
         Me.PanelInferior.Size = New System.Drawing.Size(735, 36)
         Me.PanelInferior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelInferior.Style.BackColor1.Color = System.Drawing.Color.Gold
@@ -115,9 +134,12 @@ Partial Class PR_StockActualProductosLotes
         Me.BubbleBarUsuario.MouseOverTabColors.BorderColor = System.Drawing.SystemColors.Highlight
         Me.BubbleBarUsuario.SelectedTabColors.BorderColor = System.Drawing.Color.Black
         '
+        'btnGenerar
+        '
+        '
         'PanelPrincipal
         '
-        Me.PanelPrincipal.Size = New System.Drawing.Size(372, 369)
+        Me.PanelPrincipal.Size = New System.Drawing.Size(372, 592)
         '
         'MPanelUserAct
         '
@@ -125,11 +147,18 @@ Partial Class PR_StockActualProductosLotes
         '
         'MReportViewer
         '
-        Me.MReportViewer.Size = New System.Drawing.Size(372, 369)
+        Me.MReportViewer.Size = New System.Drawing.Size(372, 592)
         '
         'MGPFiltros
         '
-        Me.MGPFiltros.Size = New System.Drawing.Size(363, 297)
+        Me.MGPFiltros.Controls.Add(Me.SymbolBox1)
+        Me.MGPFiltros.Controls.Add(Me.tbValor)
+        Me.MGPFiltros.Controls.Add(Me.Panel1)
+        Me.MGPFiltros.Controls.Add(Me.LabelX2)
+        Me.MGPFiltros.Controls.Add(Me.Panel2)
+        Me.MGPFiltros.Controls.Add(Me.LabelX1)
+        Me.MGPFiltros.Controls.Add(Me.cbGrupos)
+        Me.MGPFiltros.Size = New System.Drawing.Size(363, 520)
         '
         '
         '
@@ -161,15 +190,188 @@ Partial Class PR_StockActualProductosLotes
         '
         'PanelIzq
         '
-        Me.PanelIzq.Size = New System.Drawing.Size(363, 369)
+        Me.PanelIzq.Size = New System.Drawing.Size(363, 592)
         Me.PanelIzq.Controls.SetChildIndex(Me.PanelSuperior, 0)
         Me.PanelIzq.Controls.SetChildIndex(Me.MGPFiltros, 0)
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.checkTodosGrupos)
+        Me.Panel2.Controls.Add(Me.checkUnaGrupo)
+        Me.Panel2.Location = New System.Drawing.Point(215, 47)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(119, 35)
+        Me.Panel2.TabIndex = 259
+        '
+        'checkTodosGrupos
+        '
+        '
+        '
+        '
+        Me.checkTodosGrupos.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.checkTodosGrupos.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.checkTodosGrupos.Checked = True
+        Me.checkTodosGrupos.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.checkTodosGrupos.CheckValue = "Y"
+        Me.checkTodosGrupos.Location = New System.Drawing.Point(60, 7)
+        Me.checkTodosGrupos.Name = "checkTodosGrupos"
+        Me.checkTodosGrupos.Size = New System.Drawing.Size(55, 23)
+        Me.checkTodosGrupos.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.checkTodosGrupos.TabIndex = 252
+        Me.checkTodosGrupos.Text = "Todos"
+        '
+        'checkUnaGrupo
+        '
+        '
+        '
+        '
+        Me.checkUnaGrupo.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.checkUnaGrupo.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.checkUnaGrupo.Location = New System.Drawing.Point(10, 7)
+        Me.checkUnaGrupo.Name = "checkUnaGrupo"
+        Me.checkUnaGrupo.Size = New System.Drawing.Size(44, 23)
+        Me.checkUnaGrupo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.checkUnaGrupo.TabIndex = 251
+        Me.checkUnaGrupo.Text = "Una"
+        '
+        'LabelX1
+        '
+        Me.LabelX1.AutoSize = True
+        Me.LabelX1.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX1.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.LabelX1.Location = New System.Drawing.Point(23, 36)
+        Me.LabelX1.Name = "LabelX1"
+        Me.LabelX1.SingleLineColor = System.Drawing.SystemColors.Control
+        Me.LabelX1.Size = New System.Drawing.Size(82, 16)
+        Me.LabelX1.TabIndex = 258
+        Me.LabelX1.Text = "Laboratorio:"
+        '
+        'cbGrupos
+        '
+        Me.cbGrupos.BackColor = System.Drawing.Color.White
+        cbGrupos_DesignTimeLayout.LayoutString = resources.GetString("cbGrupos_DesignTimeLayout.LayoutString")
+        Me.cbGrupos.DesignTimeLayout = cbGrupos_DesignTimeLayout
+        Me.cbGrupos.DisabledBackColor = System.Drawing.Color.White
+        Me.cbGrupos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbGrupos.Location = New System.Drawing.Point(22, 58)
+        Me.cbGrupos.Name = "cbGrupos"
+        Me.cbGrupos.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
+        Me.cbGrupos.Office2007CustomColor = System.Drawing.Color.DodgerBlue
+        Me.cbGrupos.SelectedIndex = -1
+        Me.cbGrupos.SelectedItem = Nothing
+        Me.cbGrupos.Size = New System.Drawing.Size(175, 22)
+        Me.cbGrupos.TabIndex = 257
+        Me.cbGrupos.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
+        '
+        'LabelX2
+        '
+        Me.LabelX2.AutoSize = True
+        Me.LabelX2.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX2.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.LabelX2.Location = New System.Drawing.Point(23, 123)
+        Me.LabelX2.Name = "LabelX2"
+        Me.LabelX2.SingleLineColor = System.Drawing.SystemColors.Control
+        Me.LabelX2.Size = New System.Drawing.Size(143, 16)
+        Me.LabelX2.TabIndex = 260
+        Me.LabelX2.Text = "Fecha de Vencimiento:"
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.chbTodos)
+        Me.Panel1.Controls.Add(Me.CheckBoxX2)
+        Me.Panel1.Location = New System.Drawing.Point(216, 153)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(119, 35)
+        Me.Panel1.TabIndex = 261
+        '
+        'chbTodos
+        '
+        '
+        '
+        '
+        Me.chbTodos.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.chbTodos.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.chbTodos.Checked = True
+        Me.chbTodos.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chbTodos.CheckValue = "Y"
+        Me.chbTodos.Location = New System.Drawing.Point(60, 7)
+        Me.chbTodos.Name = "chbTodos"
+        Me.chbTodos.Size = New System.Drawing.Size(55, 23)
+        Me.chbTodos.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.chbTodos.TabIndex = 252
+        Me.chbTodos.Text = "Todos"
+        '
+        'CheckBoxX2
+        '
+        '
+        '
+        '
+        Me.CheckBoxX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CheckBoxX2.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.CheckBoxX2.Location = New System.Drawing.Point(10, 7)
+        Me.CheckBoxX2.Name = "CheckBoxX2"
+        Me.CheckBoxX2.Size = New System.Drawing.Size(44, 23)
+        Me.CheckBoxX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.CheckBoxX2.TabIndex = 251
+        Me.CheckBoxX2.Text = "Una"
+        '
+        'tbValor
+        '
+        '
+        '
+        '
+        Me.tbValor.BackgroundStyle.Class = "DateTimeInputBackground"
+        Me.tbValor.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.tbValor.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
+        Me.tbValor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbValor.Increment = 1.0R
+        Me.tbValor.Location = New System.Drawing.Point(23, 160)
+        Me.tbValor.LockUpdateChecked = False
+        Me.tbValor.MinValue = 0R
+        Me.tbValor.Name = "tbValor"
+        Me.tbValor.Size = New System.Drawing.Size(89, 21)
+        Me.tbValor.TabIndex = 262
+        Me.tbValor.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right
+        '
+        'SymbolBox1
+        '
+        Me.SymbolBox1.BackColor = System.Drawing.Color.SteelBlue
+        Me.SymbolBox1.BackgroundImage = Global.DinoM.My.Resources.Resources._051_warning
+        Me.SymbolBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        '
+        '
+        '
+        Me.SymbolBox1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.SymbolBox1.Cursor = System.Windows.Forms.Cursors.Help
+        Me.SymbolBox1.Location = New System.Drawing.Point(168, 121)
+        Me.SymbolBox1.Name = "SymbolBox1"
+        Me.SymbolBox1.Size = New System.Drawing.Size(30, 23)
+        Me.SymbolBox1.Symbol = ""
+        Me.SymbolBox1.SymbolColor = System.Drawing.Color.Red
+        Me.SymbolBox1.TabIndex = 263
+        Me.SymbolBox1.Text = "SymbolBox1"
+        '
+        'ToolTip1
+        '
+        Me.ToolTip1.BackColor = System.Drawing.SystemColors.InactiveBorder
         '
         'PR_StockActualProductosLotes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(767, 405)
+        Me.ClientSize = New System.Drawing.Size(767, 628)
         Me.Location = New System.Drawing.Point(0, 0)
         Me.Name = "PR_StockActualProductosLotes"
         Me.Text = "PR_StockActual"
@@ -186,9 +388,28 @@ Partial Class PR_StockActualProductosLotes
         Me.PanelUsuario.PerformLayout()
         Me.MPanelUserAct.ResumeLayout(False)
         CType(Me.MEP, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MGPFiltros.ResumeLayout(False)
+        Me.MGPFiltros.PerformLayout()
         Me.PanelIzq.ResumeLayout(False)
         CType(Me.MPicture, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        CType(Me.cbGrupos, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        CType(Me.tbValor, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
+
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents checkTodosGrupos As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents checkUnaGrupo As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents LabelX1 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents cbGrupos As Janus.Windows.GridEX.EditControls.MultiColumnCombo
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents chbTodos As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents CheckBoxX2 As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents LabelX2 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents SymbolBox1 As DevComponents.DotNetBar.Controls.SymbolBox
+    Friend WithEvents tbValor As DevComponents.Editors.DoubleInput
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

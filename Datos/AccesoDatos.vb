@@ -9,6 +9,11 @@ Public Class AccesoDatos
         _comando = MetodoDatos.CrearComando(Ip, UsuarioSql, ClaveSql, NombreBD)
         _comandoProcedimiento = MetodoDatos.CrearComandoProcedimiento(Ip, UsuarioSql, ClaveSql, NombreBD)
     End Sub
+    Public Shared Function D_Datos_EjecutarConulta(_DML As String) As DataTable
+        'Dim _comando As OleDbCommand = MetodoDatos.CrearComando()
+        _comando.CommandText = _DML
+        Return MetodoDatos.EjecutarComandoSelect(_comando)
+    End Function
 
     Public Shared Function D_Datos_Tabla(_Campos As String, _Tabla As String, _Where As String) As DataTable
         'Dim _comando As OleDbCommand = MetodoDatos.CrearComando()
