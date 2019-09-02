@@ -143,7 +143,7 @@ Partial Class F0_Ventas
         'PanelSuperior
         '
         Me.PanelSuperior.Controls.Add(Me.ButtonX1)
-        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelSuperior.Size = New System.Drawing.Size(1016, 72)
         Me.PanelSuperior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelSuperior.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(150, Byte), Integer))
@@ -167,7 +167,7 @@ Partial Class F0_Ventas
         'PanelInferior
         '
         Me.PanelInferior.Location = New System.Drawing.Point(0, 570)
-        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelInferior.Size = New System.Drawing.Size(1016, 39)
         Me.PanelInferior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelInferior.Style.BackColor1.Color = System.Drawing.Color.Transparent
@@ -198,14 +198,14 @@ Partial Class F0_Ventas
         Me.BubbleBarUsuario.ButtonBackAreaStyle.PaddingLeft = 3
         Me.BubbleBarUsuario.ButtonBackAreaStyle.PaddingRight = 3
         Me.BubbleBarUsuario.ButtonBackAreaStyle.PaddingTop = 3
-        Me.BubbleBarUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.BubbleBarUsuario.Margin = New System.Windows.Forms.Padding(4)
         Me.BubbleBarUsuario.MouseOverTabColors.BorderColor = System.Drawing.SystemColors.Highlight
         Me.BubbleBarUsuario.SelectedTabColors.BorderColor = System.Drawing.Color.Black
         Me.BubbleBarUsuario.Size = New System.Drawing.Size(155, 39)
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNombreUsu.ReadOnly = True
         Me.TxtNombreUsu.Size = New System.Drawing.Size(135, 32)
         Me.TxtNombreUsu.Text = "DEFAULT"
@@ -228,11 +228,11 @@ Partial Class F0_Ventas
         'PanelToolBar2
         '
         Me.PanelToolBar2.Location = New System.Drawing.Point(936, 0)
-        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(4)
         '
         'PanelPrincipal
         '
-        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelPrincipal.Size = New System.Drawing.Size(1016, 609)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelInferior, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelUsuario, 0)
@@ -258,7 +258,7 @@ Partial Class F0_Ventas
         'MPanelUserAct
         '
         Me.MPanelUserAct.Location = New System.Drawing.Point(861, 0)
-        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(4)
         Me.MPanelUserAct.Size = New System.Drawing.Size(155, 39)
         '
         'MRlAccion
@@ -267,25 +267,26 @@ Partial Class F0_Ventas
         '
         '
         Me.MRlAccion.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(4)
         Me.MRlAccion.Size = New System.Drawing.Size(560, 72)
         '
         'PanelContent
         '
+        Me.PanelContent.Controls.Add(Me.GPanelProductos)
         Me.PanelContent.Controls.Add(Me.PanelDetalle)
         Me.PanelContent.Controls.Add(Me.PanelContentSup)
         Me.PanelContent.Controls.Add(Me.PanelTotal)
-        Me.PanelContent.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelContent.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelContent.Size = New System.Drawing.Size(983, 498)
         '
         'Panel1
         '
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Size = New System.Drawing.Size(1016, 498)
         '
         'MSuperTabControlPanel1
         '
-        Me.MSuperTabControlPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MSuperTabControlPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.MSuperTabControlPanel1.Size = New System.Drawing.Size(983, 498)
         '
         'MSuperTabControl
@@ -304,7 +305,7 @@ Partial Class F0_Ventas
         Me.MSuperTabControl.ControlBox.Name = ""
         Me.MSuperTabControl.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.MSuperTabControl.ControlBox.MenuBox, Me.MSuperTabControl.ControlBox.CloseBox})
         Me.MSuperTabControl.Controls.Add(Me.SuperTabControlPanel2)
-        Me.MSuperTabControl.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MSuperTabControl.Margin = New System.Windows.Forms.Padding(4)
         Me.MSuperTabControl.SelectedTabIndex = 1
         Me.MSuperTabControl.Size = New System.Drawing.Size(1016, 498)
         Me.MSuperTabControl.Tabs.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabItem1})
@@ -314,7 +315,7 @@ Partial Class F0_Ventas
         'PictureBox1
         '
         Me.PictureBox1.Location = New System.Drawing.Point(592, 0)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         '
         'SuperTabItem1
         '
@@ -1144,7 +1145,6 @@ Partial Class F0_Ventas
         '
         Me.PanelDetalle.BackColor = System.Drawing.Color.White
         Me.PanelDetalle.Controls.Add(Me.GroupPanel4)
-        Me.PanelDetalle.Controls.Add(Me.GPanelProductos)
         Me.PanelDetalle.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelDetalle.Location = New System.Drawing.Point(0, 211)
         Me.PanelDetalle.Name = "PanelDetalle"
@@ -1161,7 +1161,7 @@ Partial Class F0_Ventas
         Me.GroupPanel4.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel4.Location = New System.Drawing.Point(0, 0)
         Me.GroupPanel4.Name = "GroupPanel4"
-        Me.GroupPanel4.Size = New System.Drawing.Size(983, 0)
+        Me.GroupPanel4.Size = New System.Drawing.Size(983, 147)
         '
         '
         '
@@ -1201,7 +1201,7 @@ Partial Class F0_Ventas
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel5.Location = New System.Drawing.Point(0, 0)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(977, 8)
+        Me.Panel5.Size = New System.Drawing.Size(977, 124)
         Me.Panel5.TabIndex = 0
         '
         'grdetalle
@@ -1214,7 +1214,7 @@ Partial Class F0_Ventas
         Me.grdetalle.Name = "grdetalle"
         Me.grdetalle.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.grdetalle.Office2007CustomColor = System.Drawing.Color.DodgerBlue
-        Me.grdetalle.Size = New System.Drawing.Size(977, 8)
+        Me.grdetalle.Size = New System.Drawing.Size(977, 124)
         Me.grdetalle.TabIndex = 0
         Me.grdetalle.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
@@ -1224,11 +1224,10 @@ Partial Class F0_Ventas
         Me.GPanelProductos.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
         Me.GPanelProductos.Controls.Add(Me.Panel7)
         Me.GPanelProductos.DisabledBackColor = System.Drawing.Color.Empty
-        Me.GPanelProductos.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.GPanelProductos.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GPanelProductos.Location = New System.Drawing.Point(0, -60)
+        Me.GPanelProductos.Location = New System.Drawing.Point(263, 0)
         Me.GPanelProductos.Name = "GPanelProductos"
-        Me.GPanelProductos.Size = New System.Drawing.Size(983, 207)
+        Me.GPanelProductos.Size = New System.Drawing.Size(720, 565)
         '
         '
         '
@@ -1268,7 +1267,7 @@ Partial Class F0_Ventas
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel7.Location = New System.Drawing.Point(0, 0)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(977, 184)
+        Me.Panel7.Size = New System.Drawing.Size(714, 542)
         Me.Panel7.TabIndex = 0
         '
         'grProductos
@@ -1283,7 +1282,7 @@ Partial Class F0_Ventas
         Me.grProductos.Name = "grProductos"
         Me.grProductos.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.grProductos.Office2007CustomColor = System.Drawing.Color.DodgerBlue
-        Me.grProductos.Size = New System.Drawing.Size(977, 184)
+        Me.grProductos.Size = New System.Drawing.Size(714, 542)
         Me.grProductos.TabIndex = 0
         Me.grProductos.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
@@ -1351,7 +1350,7 @@ Partial Class F0_Ventas
         Me.QrFactura.ErrorCorrectLevel = Gma.QrCodeNet.Encoding.ErrorCorrectionLevel.M
         Me.QrFactura.Image = CType(resources.GetObject("QrFactura.Image"), System.Drawing.Image)
         Me.QrFactura.Location = New System.Drawing.Point(384, 2)
-        Me.QrFactura.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.QrFactura.Margin = New System.Windows.Forms.Padding(2)
         Me.QrFactura.Name = "QrFactura"
         Me.QrFactura.QuietZoneModule = Gma.QrCodeNet.Encoding.Windows.Render.QuietZoneModules.Two
         Me.QrFactura.Size = New System.Drawing.Size(95, 90)
@@ -1646,7 +1645,7 @@ Partial Class F0_Ventas
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1016, 609)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "F0_Ventas"
         Me.Text = "F0_Ventas"
         Me.Controls.SetChildIndex(Me.PanelPrincipal, 0)
