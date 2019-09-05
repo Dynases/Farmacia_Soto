@@ -106,5 +106,7 @@ Public Class PR_StockActualProductosLotes
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         _tab.Close()
     End Sub
+
+
 #End Region
 End Class

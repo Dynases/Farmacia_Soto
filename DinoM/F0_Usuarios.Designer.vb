@@ -224,13 +224,13 @@ Partial Class F0_Usuarios
         Me.Tb_fuenteTam.BackgroundStyle.Class = "DateTimeInputBackground"
         Me.Tb_fuenteTam.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.Tb_fuenteTam.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
-        Me.Tb_fuenteTam.Font = New System.Drawing.Font("Open Sans Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Tb_fuenteTam.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Tb_fuenteTam.Location = New System.Drawing.Point(553, 73)
         Me.Tb_fuenteTam.MaxValue = 12
         Me.Tb_fuenteTam.MinValue = 7
         Me.Tb_fuenteTam.Name = "Tb_fuenteTam"
         Me.Tb_fuenteTam.ShowUpDown = True
-        Me.Tb_fuenteTam.Size = New System.Drawing.Size(59, 24)
+        Me.Tb_fuenteTam.Size = New System.Drawing.Size(59, 21)
         Me.Tb_fuenteTam.TabIndex = 6
         Me.Tb_fuenteTam.Value = 7
         '
@@ -242,26 +242,26 @@ Partial Class F0_Usuarios
         Me.Tb_DiasPedidos.BackgroundStyle.Class = "DateTimeInputBackground"
         Me.Tb_DiasPedidos.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.Tb_DiasPedidos.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
-        Me.Tb_DiasPedidos.Font = New System.Drawing.Font("Open Sans Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Tb_DiasPedidos.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Tb_DiasPedidos.Location = New System.Drawing.Point(553, 45)
         Me.Tb_DiasPedidos.MinValue = 0
         Me.Tb_DiasPedidos.Name = "Tb_DiasPedidos"
         Me.Tb_DiasPedidos.ShowUpDown = True
-        Me.Tb_DiasPedidos.Size = New System.Drawing.Size(59, 24)
+        Me.Tb_DiasPedidos.Size = New System.Drawing.Size(59, 21)
         Me.Tb_DiasPedidos.TabIndex = 5
         '
         'JMC_Categoria
         '
         JMC_Categoria_DesignTimeLayout.LayoutString = resources.GetString("JMC_Categoria_DesignTimeLayout.LayoutString")
         Me.JMC_Categoria.DesignTimeLayout = JMC_Categoria_DesignTimeLayout
-        Me.JMC_Categoria.Font = New System.Drawing.Font("Open Sans Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.JMC_Categoria.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.JMC_Categoria.Location = New System.Drawing.Point(128, 100)
         Me.JMC_Categoria.Name = "JMC_Categoria"
         Me.JMC_Categoria.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.JMC_Categoria.Office2007CustomColor = System.Drawing.Color.DodgerBlue
         Me.JMC_Categoria.SelectedIndex = -1
         Me.JMC_Categoria.SelectedItem = Nothing
-        Me.JMC_Categoria.Size = New System.Drawing.Size(203, 24)
+        Me.JMC_Categoria.Size = New System.Drawing.Size(203, 21)
         Me.JMC_Categoria.TabIndex = 3
         Me.JMC_Categoria.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
@@ -271,7 +271,7 @@ Partial Class F0_Usuarios
         '
         '
         Me.Tb_Estado.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.Tb_Estado.Font = New System.Drawing.Font("Open Sans Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Tb_Estado.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Tb_Estado.Location = New System.Drawing.Point(553, 101)
         Me.Tb_Estado.Name = "Tb_Estado"
         Me.Tb_Estado.OffBackColor = System.Drawing.Color.Black
@@ -292,12 +292,12 @@ Partial Class F0_Usuarios
         '
         Me.TextBoxX1.Border.Class = "TextBoxBorder"
         Me.TextBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.TextBoxX1.Font = New System.Drawing.Font("Open Sans Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxX1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxX1.Location = New System.Drawing.Point(128, 73)
         Me.TextBoxX1.MaxLength = 20
         Me.TextBoxX1.Name = "TextBoxX1"
         Me.TextBoxX1.PreventEnterBeep = True
-        Me.TextBoxX1.Size = New System.Drawing.Size(203, 24)
+        Me.TextBoxX1.Size = New System.Drawing.Size(203, 21)
         Me.TextBoxX1.TabIndex = 2
         Me.TextBoxX1.UseSystemPasswordChar = True
         '
@@ -308,11 +308,11 @@ Partial Class F0_Usuarios
         '
         Me.Tb_Nombre.Border.Class = "TextBoxBorder"
         Me.Tb_Nombre.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.Tb_Nombre.Font = New System.Drawing.Font("Open Sans Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Tb_Nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Tb_Nombre.Location = New System.Drawing.Point(128, 45)
         Me.Tb_Nombre.Name = "Tb_Nombre"
         Me.Tb_Nombre.PreventEnterBeep = True
-        Me.Tb_Nombre.Size = New System.Drawing.Size(203, 24)
+        Me.Tb_Nombre.Size = New System.Drawing.Size(203, 21)
         Me.Tb_Nombre.TabIndex = 1
         '
         'Tb_Id
@@ -322,11 +322,11 @@ Partial Class F0_Usuarios
         '
         Me.Tb_Id.Border.Class = "TextBoxBorder"
         Me.Tb_Id.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.Tb_Id.Font = New System.Drawing.Font("Open Sans Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Tb_Id.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Tb_Id.Location = New System.Drawing.Point(128, 17)
         Me.Tb_Id.Name = "Tb_Id"
         Me.Tb_Id.PreventEnterBeep = True
-        Me.Tb_Id.Size = New System.Drawing.Size(100, 24)
+        Me.Tb_Id.Size = New System.Drawing.Size(100, 21)
         Me.Tb_Id.TabIndex = 0
         '
         'Panel1
@@ -505,7 +505,7 @@ Partial Class F0_Usuarios
         '
         '
         Me.tbTodasSucursales.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.tbTodasSucursales.Font = New System.Drawing.Font("Open Sans Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbTodasSucursales.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbTodasSucursales.Location = New System.Drawing.Point(553, 128)
         Me.tbTodasSucursales.Name = "tbTodasSucursales"
         Me.tbTodasSucursales.OffBackColor = System.Drawing.Color.Black
@@ -523,14 +523,14 @@ Partial Class F0_Usuarios
         '
         tbSuc_DesignTimeLayout.LayoutString = resources.GetString("tbSuc_DesignTimeLayout.LayoutString")
         Me.tbSuc.DesignTimeLayout = tbSuc_DesignTimeLayout
-        Me.tbSuc.Font = New System.Drawing.Font("Open Sans Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbSuc.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbSuc.Location = New System.Drawing.Point(128, 129)
         Me.tbSuc.Name = "tbSuc"
         Me.tbSuc.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.tbSuc.Office2007CustomColor = System.Drawing.Color.DodgerBlue
         Me.tbSuc.SelectedIndex = -1
         Me.tbSuc.SelectedItem = Nothing
-        Me.tbSuc.Size = New System.Drawing.Size(203, 24)
+        Me.tbSuc.Size = New System.Drawing.Size(203, 21)
         Me.tbSuc.TabIndex = 4
         Me.tbSuc.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
@@ -583,7 +583,7 @@ Partial Class F0_Usuarios
         Me.JGr_Buscador.Dock = System.Windows.Forms.DockStyle.Fill
         Me.JGr_Buscador.FlatBorderColor = System.Drawing.Color.AliceBlue
         Me.JGr_Buscador.FocusStyle = Janus.Windows.GridEX.FocusStyle.Solid
-        Me.JGr_Buscador.Font = New System.Drawing.Font("Open Sans Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.JGr_Buscador.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.JGr_Buscador.HeaderFormatStyle.Alpha = 0
         Me.JGr_Buscador.HeaderFormatStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(15, Byte), Integer), CType(CType(72, Byte), Integer), CType(CType(127, Byte), Integer))
         Me.JGr_Buscador.HeaderFormatStyle.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -593,7 +593,7 @@ Partial Class F0_Usuarios
         Me.JGr_Buscador.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.JGr_Buscador.Office2007CustomColor = System.Drawing.Color.DodgerBlue
         Me.JGr_Buscador.SelectedFormatStyle.BackColor = System.Drawing.Color.DodgerBlue
-        Me.JGr_Buscador.SelectedFormatStyle.Font = New System.Drawing.Font("Open Sans", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.JGr_Buscador.SelectedFormatStyle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.JGr_Buscador.SelectedFormatStyle.ForeColor = System.Drawing.Color.White
         Me.JGr_Buscador.Size = New System.Drawing.Size(846, 252)
         Me.JGr_Buscador.TabIndex = 0

@@ -281,7 +281,7 @@ Partial Class PR_StockActualProductosLotes
         Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX2.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.LabelX2.Location = New System.Drawing.Point(6, 122)
+        Me.LabelX2.Location = New System.Drawing.Point(9, 122)
         Me.LabelX2.Name = "LabelX2"
         Me.LabelX2.SingleLineColor = System.Drawing.SystemColors.Control
         Me.LabelX2.Size = New System.Drawing.Size(125, 16)
@@ -341,7 +341,7 @@ Partial Class PR_StockActualProductosLotes
         Me.txtValor.Border.Class = "TextBoxBorder"
         Me.txtValor.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.txtValor.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtValor.Location = New System.Drawing.Point(200, 165)
+        Me.txtValor.Location = New System.Drawing.Point(147, 165)
         Me.txtValor.Name = "txtValor"
         Me.txtValor.PreventEnterBeep = True
         Me.txtValor.Size = New System.Drawing.Size(100, 22)
@@ -358,12 +358,12 @@ Partial Class PR_StockActualProductosLotes
         Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX3.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(85, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.LabelX3.Location = New System.Drawing.Point(6, 165)
+        Me.LabelX3.Location = New System.Drawing.Point(10, 167)
         Me.LabelX3.Name = "LabelX3"
         Me.LabelX3.SingleLineColor = System.Drawing.SystemColors.Control
-        Me.LabelX3.Size = New System.Drawing.Size(151, 16)
+        Me.LabelX3.Size = New System.Drawing.Size(133, 16)
         Me.LabelX3.TabIndex = 264
-        Me.LabelX3.Text = "Mayor o igual en (Días):"
+        Me.LabelX3.Text = "Días menor o igual a:"
         '
         'PR_StockActualProductosLotes
         '

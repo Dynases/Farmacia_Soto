@@ -320,7 +320,7 @@ Partial Class ModeloF00
         Me.btnEliminar.Size = New System.Drawing.Size(72, 72)
         Me.btnEliminar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btnEliminar.TabIndex = 8
-        Me.btnEliminar.Text = "ELIMNAR"
+        Me.btnEliminar.Text = "ELIMINAR"
         Me.btnEliminar.TextColor = System.Drawing.Color.White
         '
         'btnModificar
@@ -650,7 +650,7 @@ Partial Class ModeloF00
         Me.BubbleButton2.ImageLarge = Global.Modelo.My.Resources.Resources.usuario
         Me.BubbleButton2.Name = "BubbleButton2"
         '
-        'ModeloF0
+        'ModeloF00
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -658,7 +658,7 @@ Partial Class ModeloF00
         Me.Controls.Add(Me.PanelPrincipal)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.KeyPreview = True
-        Me.Name = "ModeloF0"
+        Me.Name = "ModeloF00"
         Me.Text = "{...TITULO...}"
         Me.PanelPrincipal.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)

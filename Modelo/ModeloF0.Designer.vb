@@ -320,7 +320,7 @@ Partial Class ModeloF0
         Me.btnEliminar.Size = New System.Drawing.Size(72, 72)
         Me.btnEliminar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btnEliminar.TabIndex = 8
-        Me.btnEliminar.Text = "ELIMNAR"
+        Me.btnEliminar.Text = "ELIMINAR"
         Me.btnEliminar.TextColor = System.Drawing.Color.White
         '
         'btnModificar
