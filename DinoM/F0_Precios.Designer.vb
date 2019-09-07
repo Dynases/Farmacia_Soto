@@ -683,14 +683,14 @@ Partial Class F0_Precios
         Me.msModulos.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.msModulos.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SELECCIONARTODOSDELToolStripMenuItem})
         Me.msModulos.Name = "msModulos"
-        Me.msModulos.Size = New System.Drawing.Size(209, 40)
+        Me.msModulos.Size = New System.Drawing.Size(208, 40)
         '
         'SELECCIONARTODOSDELToolStripMenuItem
         '
         Me.SELECCIONARTODOSDELToolStripMenuItem.Image = Global.DinoM.My.Resources.Resources.trash2
         Me.SELECCIONARTODOSDELToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.SELECCIONARTODOSDELToolStripMenuItem.Name = "SELECCIONARTODOSDELToolStripMenuItem"
-        Me.SELECCIONARTODOSDELToolStripMenuItem.Size = New System.Drawing.Size(208, 36)
+        Me.SELECCIONARTODOSDELToolStripMenuItem.Size = New System.Drawing.Size(207, 36)
         Me.SELECCIONARTODOSDELToolStripMenuItem.Text = "ELIMINAR CATEGORIA"
         '
         'F0_Precios

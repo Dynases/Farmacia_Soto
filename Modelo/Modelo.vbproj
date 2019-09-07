@@ -517,6 +517,8 @@
     <Content Include="Resources\img2.jpg" />
     <Content Include="Resources\INFORMATION.png" />
     <Content Include="Resources\jpg.png" />
+    <None Include="Resources\logo.jpeg" />
+    <None Include="Resources\logo.png" />
     <Content Include="Resources\man-28.png" />
     <Content Include="Resources\man.png" />
     <Content Include="Resources\mark.png" />

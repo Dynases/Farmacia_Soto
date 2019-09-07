@@ -126,7 +126,7 @@ Partial Class F0_Libreria
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNombreUsu.ReadOnly = True
         Me.TxtNombreUsu.Size = New System.Drawing.Size(135, 32)
         Me.TxtNombreUsu.Text = "DEFAULT"
@@ -154,7 +154,7 @@ Partial Class F0_Libreria
         '
         'btnUltimo
         '
-        Me.btnUltimo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnUltimo.Margin = New System.Windows.Forms.Padding(2)
         '
         'LblPaginacion
         '
@@ -170,7 +170,7 @@ Partial Class F0_Libreria
         'PanelContent
         '
         Me.PanelContent.Controls.Add(Me.PanelPrecios)
-        Me.PanelContent.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PanelContent.Margin = New System.Windows.Forms.Padding(2)
         '
         'Panel1
         '
@@ -178,7 +178,7 @@ Partial Class F0_Libreria
         '
         'MSuperTabControlPanel1
         '
-        Me.MSuperTabControlPanel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.MSuperTabControlPanel1.Margin = New System.Windows.Forms.Padding(2)
         '
         'MSuperTabControl
         '
@@ -510,7 +510,7 @@ Partial Class F0_Libreria
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(984, 561)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "F0_Libreria"
         Me.Text = "F0_Precios"
         Me.Controls.SetChildIndex(Me.PanelPrincipal, 0)

@@ -503,7 +503,7 @@ Partial Class ModeloF1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.PictureBox1.Image = Global.Modelo.My.Resources.Resources.dinases
+        Me.PictureBox1.Image = Global.Modelo.My.Resources.Resources.logo3
         Me.PictureBox1.Location = New System.Drawing.Point(477, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(264, 72)
