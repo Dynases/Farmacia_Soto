@@ -238,7 +238,7 @@ Public Class F0_Ventas
             PanelTotal.Visible = True
             PanelInferior.Visible = True
         End If
-        tbCliente.Focus()
+        'tbCliente.Focus()
 
         TbNit.Clear()
         TbNombre1.Clear()
@@ -253,8 +253,11 @@ Public Class F0_Ventas
         End If
         FilaSelectLote = Nothing
         SwProforma.Value = False
-        tbCliente.Focus()
+        'tbCliente.Focus()
         Table_Producto = Nothing
+        grdetalle.Col = 4
+        grdetalle.Row = 0
+        grdetalle.Select()
     End Sub
     Public Sub _prMostrarRegistro(_N As Integer)
         '' grVentas.Row = _N
@@ -2064,6 +2067,7 @@ Public Class F0_Ventas
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         _Limpiar()
         _prhabilitar()
+        AsignarClienteVendedor()
 
         btnNuevo.Enabled = False
         btnModificar.Enabled = False
@@ -2079,9 +2083,27 @@ Public Class F0_Ventas
 
         '_Limpiar()
     End Sub
+    Private Sub AsignarClienteVendedor()
+        Dim _tabla11 As DataTable = L_fnListarClientes()
+        If _tabla11.Rows.Count > 0 Then
+            tbCliente.Text = _tabla11.Rows(0).Item("yddesc")
+            _CodCliente = _tabla11.Rows(0).Item("ydnumi") 'Codigo
+            tbVendedor.Text = _tabla11.Rows(0).Item("vendedor") 'Codigo
+            _CodEmpleado = _tabla11.Rows(0).Item("ydnumivend") 'Codigo
+            'Else
+            '    Dim dt As DataTable
+            '    dt = L_fnListarClientes()
+            '    If dt.Rows.Count > 0 Then
+            '        Dim fila As DataRow() = dt.Select("ydnumi =MIN(ydnumi)")
+            '        tbCliente.Text = fila(0).ItemArray(3)
+            '        _CodCliente = fila(0).ItemArray(0)
+            '        tbVendedor.Text = fila(0).ItemArray(9)
+            '        _CodEmpleado = fila(0).ItemArray(8)
+            '    End If
+        End If
+    End Sub
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         _prSalir()
-
     End Sub
 
 
@@ -2510,10 +2532,10 @@ salirIf:
                         CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbcmin") = 1
                         'If (gb_FacturaIncluirICE) Then
                         CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbpcos") = FilaSelectLote.Item("pcos")
-                            'Else
-                            '    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbpcos") = 0
-                            'End If
-                            CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbptot2") = FilaSelectLote.Item("pcos")
+                        'Else
+                        '    CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbpcos") = 0
+                        'End If
+                        CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbptot2") = FilaSelectLote.Item("pcos")
 
                         CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tblote") = grProductos.GetValue("iclot")
                         CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbfechaVenc") = grProductos.GetValue("icfven")
@@ -2525,8 +2547,6 @@ salirIf:
                         Dim img As Bitmap = New Bitmap(My.Resources.mensaje, 50, 50)
                         ToastNotification.Show(Me, "El producto con el lote ya existe modifique su cantidad".ToUpper, img, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)
                     End If
-
-
 
                 End If
 

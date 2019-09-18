@@ -592,8 +592,8 @@ Public Class F1_Vendedor
         'a.ydimg,
         'a.ydfact, a.ydhact, a.yduact
 
-        listEstCeldas.Add(New Modelo.Celda("ydnumi", False, "Código", 80))
-        listEstCeldas.Add(New Modelo.Celda("ydcod", True, "Codigo".ToUpper, 80))
+        listEstCeldas.Add(New Modelo.Celda("ydnumi", True, "Código".ToUpper, 80))
+        listEstCeldas.Add(New Modelo.Celda("ydcod", False, "Codigo".ToUpper, 80))
         listEstCeldas.Add(New Modelo.Celda("yddesc", True, "Nombres".ToUpper, 250))
         listEstCeldas.Add(New Modelo.Celda("ydzona", False))
         listEstCeldas.Add(New Modelo.Celda("yddct", False))
@@ -624,6 +624,8 @@ Public Class F1_Vendedor
         listEstCeldas.Add(New Modelo.Celda("vendedor", False))
         listEstCeldas.Add(New Modelo.Celda("ydrut", False))
         listEstCeldas.Add(New Modelo.Celda("visita", False))
+        listEstCeldas.Add(New Modelo.Celda("yddias", False))
+        listEstCeldas.Add(New Modelo.Celda("ydlcred", False))
 
         Return listEstCeldas
     End Function

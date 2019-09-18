@@ -2241,6 +2241,7 @@ Partial Class P_Principal
         Me.Controls.Add(Me.rmSesion)
         Me.Controls.Add(Me.SideNav1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "P_Principal"
         Me.Text = "Dino M"
         Me.SideNav1.ResumeLayout(False)

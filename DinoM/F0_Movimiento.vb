@@ -923,7 +923,7 @@ Public Class F0_Movimiento
         _fnObtenerFilaDetalle(pos, grdetalle.GetValue("icid"))
 
         Dim existe As Boolean = _fnExisteProducto(grproducto.GetValue("yfnumi"))
-        If ((pos >= 0) And (Not existe)) Then
+        If ((pos >= 0)) Then 'And (Not existe) 'Era la otra condición que estaba para verificar si existe ya el producto
             CType(grdetalle.DataSource, DataTable).Rows(pos).Item("iccprod") = grproducto.GetValue("yfnumi")
             CType(grdetalle.DataSource, DataTable).Rows(pos).Item("producto") = grproducto.GetValue("yfcdprod1")
             CType(grdetalle.DataSource, DataTable).Rows(pos).Item("stock") = grproducto.GetValue("stock")

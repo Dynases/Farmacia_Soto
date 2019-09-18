@@ -447,7 +447,7 @@ Partial Class F1_Productos
         Me.LabelX7.SingleLineColor = System.Drawing.SystemColors.Control
         Me.LabelX7.Size = New System.Drawing.Size(79, 23)
         Me.LabelX7.TabIndex = 32
-        Me.LabelX7.Text = "Conversion:"
+        Me.LabelX7.Text = "Conversión:"
         Me.LabelX7.TextAlignment = System.Drawing.StringAlignment.Far
         '
         'LabelX6
@@ -465,7 +465,7 @@ Partial Class F1_Productos
         Me.LabelX6.SingleLineColor = System.Drawing.SystemColors.Control
         Me.LabelX6.Size = New System.Drawing.Size(94, 16)
         Me.LabelX6.TabIndex = 31
-        Me.LabelX6.Text = "Unid. Maxima:"
+        Me.LabelX6.Text = "Unid. Máxima:"
         '
         'lbgrupo1
         '
@@ -742,7 +742,7 @@ Partial Class F1_Productos
         Me.LabelX12.SingleLineColor = System.Drawing.SystemColors.Control
         Me.LabelX12.Size = New System.Drawing.Size(125, 23)
         Me.LabelX12.TabIndex = 226
-        Me.LabelX12.Text = "Stock Minimo:"
+        Me.LabelX12.Text = "Stock Mínimo:"
         '
         'tbCodProd
         '
@@ -842,7 +842,7 @@ Partial Class F1_Productos
         Me.LabelX4.SingleLineColor = System.Drawing.SystemColors.Control
         Me.LabelX4.Size = New System.Drawing.Size(125, 23)
         Me.LabelX4.TabIndex = 27
-        Me.LabelX4.Text = "Descripcion Corta:"
+        Me.LabelX4.Text = "Descripción Corta:"
         '
         'tbDescPro
         '
@@ -874,7 +874,7 @@ Partial Class F1_Productos
         Me.LabelX3.SingleLineColor = System.Drawing.SystemColors.Control
         Me.LabelX3.Size = New System.Drawing.Size(148, 23)
         Me.LabelX3.TabIndex = 25
-        Me.LabelX3.Text = "Descripcion Producto:"
+        Me.LabelX3.Text = "Descripción Producto:"
         '
         'tbDescCort
         '

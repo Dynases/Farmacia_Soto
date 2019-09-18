@@ -1103,7 +1103,7 @@ salirIf:
                 grdetalle.Row = grdetalle.RowCount - 1
                 _fnObtenerFilaDetalle(pos, grdetalle.GetValue("cbnumi"))
                 Dim existe As Boolean = _fnExisteProducto(grProductos.GetValue("yfnumi"))
-                If ((pos >= 0) And (Not existe)) Then
+                If ((pos >= 0)) Then 'And (Not existe) 'Era la otra condición que estaba para verificar si existe ya el producto
                     CType(grdetalle.DataSource, DataTable).Rows(pos).Item("cbty5prod") = grProductos.GetValue("yfnumi")
                     CType(grdetalle.DataSource, DataTable).Rows(pos).Item("producto") = grProductos.GetValue("yfcdprod1")
                     CType(grdetalle.DataSource, DataTable).Rows(pos).Item("cbumin") = grProductos.GetValue("yfumin")

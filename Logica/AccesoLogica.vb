@@ -1359,6 +1359,7 @@ Public Class AccesoLogica
 
         Return _Tabla
     End Function
+
     Public Shared Function L_fnListarProforma() As DataTable
         Dim _Tabla As DataTable
 
