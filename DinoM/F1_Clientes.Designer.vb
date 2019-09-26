@@ -56,7 +56,6 @@ Partial Class F1_Clientes
         Me.SuperTabItem1 = New DevComponents.DotNetBar.SuperTabItem()
         Me.SuperTabControlPanel3 = New DevComponents.DotNetBar.SuperTabControlPanel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.UsImg = New DinoM.UCImg()
         Me.BtAdicionar = New DevComponents.DotNetBar.ButtonX()
         Me.LabelX15 = New DevComponents.DotNetBar.LabelX()
         Me.SuperTabItem3 = New DevComponents.DotNetBar.SuperTabItem()
@@ -94,6 +93,7 @@ Partial Class F1_Clientes
         Me.btTipoDoc = New DevComponents.DotNetBar.ButtonX()
         Me.cbZona = New Janus.Windows.GridEX.EditControls.MultiColumnCombo()
         Me.cbTipoDoc = New Janus.Windows.GridEX.EditControls.MultiColumnCombo()
+        Me.UsImg = New DinoM.UCImg()
         CType(Me.SuperTabPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuperTabPrincipal.SuspendLayout()
         Me.SuperTabControlPanelRegistro.SuspendLayout()
@@ -368,7 +368,7 @@ Partial Class F1_Clientes
         Me.LabelX2.SingleLineColor = System.Drawing.SystemColors.Control
         Me.LabelX2.Size = New System.Drawing.Size(113, 23)
         Me.LabelX2.TabIndex = 225
-        Me.LabelX2.Text = "Código CLiente:"
+        Me.LabelX2.Text = "Código Cliente:"
         '
         'tbCodCliente
         '
@@ -838,16 +838,6 @@ Partial Class F1_Clientes
         Me.Panel2.Size = New System.Drawing.Size(430, 284)
         Me.Panel2.TabIndex = 223
         '
-        'UsImg
-        '
-        Me.UsImg.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.UsImg.BackColor = System.Drawing.Color.Transparent
-        Me.UsImg.Location = New System.Drawing.Point(100, 14)
-        Me.UsImg.Margin = New System.Windows.Forms.Padding(4)
-        Me.UsImg.Name = "UsImg"
-        Me.UsImg.Size = New System.Drawing.Size(310, 257)
-        Me.UsImg.TabIndex = 222
-        '
         'BtAdicionar
         '
         Me.BtAdicionar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
@@ -1132,7 +1122,7 @@ Partial Class F1_Clientes
         Me.LabelX17.SingleLineColor = System.Drawing.SystemColors.Control
         Me.LabelX17.Size = New System.Drawing.Size(116, 23)
         Me.LabelX17.TabIndex = 249
-        Me.LabelX17.Text = "Frec.Visita"
+        Me.LabelX17.Text = "Frec.Visita:"
         '
         'cbVisita
         '
@@ -1457,6 +1447,16 @@ Partial Class F1_Clientes
         Me.cbTipoDoc.TabIndex = 2
         Me.cbTipoDoc.TabStop = False
         Me.cbTipoDoc.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
+        '
+        'UsImg
+        '
+        Me.UsImg.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.UsImg.BackColor = System.Drawing.Color.Transparent
+        Me.UsImg.Location = New System.Drawing.Point(100, 14)
+        Me.UsImg.Margin = New System.Windows.Forms.Padding(4)
+        Me.UsImg.Name = "UsImg"
+        Me.UsImg.Size = New System.Drawing.Size(310, 257)
+        Me.UsImg.TabIndex = 222
         '
         'F1_Clientes
         '

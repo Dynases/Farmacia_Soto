@@ -426,14 +426,14 @@ Public Class F0_Ventas
         With grdetalle.RootTable.Columns("tbporc")
             .Width = 100
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
-            .Visible = True
+            .Visible = False
             .FormatString = "0.00"
             .Caption = "P.Desc(%)".ToUpper
         End With
         With grdetalle.RootTable.Columns("tbdesc")
             .Width = 100
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
-            .Visible = True
+            .Visible = False
             .FormatString = "0.00"
             .Caption = "M.Desc".ToUpper
         End With
@@ -1170,9 +1170,10 @@ Public Class F0_Ventas
         Return tbFechaVenta.IsInputReadOnly = False
     End Function
     Private Sub _HabilitarProductos()
+        GPanelProductos.Height = 530
         GPanelProductos.Visible = True
-        PanelTotal.Visible = False
-        PanelInferior.Visible = False
+        'PanelTotal.Visible = False
+        'PanelInferior.Visible = False
         _prCargarProductos(Str(_CodCliente))
         grProductos.Focus()
         grProductos.MoveTo(grProductos.FilterRow)
@@ -1831,7 +1832,8 @@ Public Class F0_Ventas
         If (gb_DetalleProducto) Then
             ponerDescripcionProducto(dt)
         End If
-        Dim total As Decimal = dt.Compute("SUM(Total)", "")
+
+        Dim total As Decimal = dt.Compute("SUM(Total)", "") - dt.Rows(0).Item("Descuento")
         Dim totald As Double = (total / 6.96)
         Dim fechaven As String = dt.Rows(0).Item("fechaventa")
         If Not IsNothing(P_Global.Visualizador) Then
@@ -1875,11 +1877,12 @@ Public Class F0_Ventas
             ''objrep.SetDataSource(Dt1Kardex)
 
             objrep.SetDataSource(dt)
+            objrep.SetParameterValue("Total", total)
             objrep.SetParameterValue("TotalBs", li)
             objrep.SetParameterValue("TotalDo", lid)
             objrep.SetParameterValue("TotalDoN", totald)
             objrep.SetParameterValue("usuario", gs_user)
-            objrep.SetParameterValue("estado", 1)
+            objrep.SetParameterValue("estado", 0)
             P_Global.Visualizador.CrGeneral.ReportSource = objrep 'Comentar
             P_Global.Visualizador.Show() 'Comentar
             P_Global.Visualizador.BringToFront() 'Comentar
@@ -1890,6 +1893,7 @@ Public Class F0_Ventas
             'objrep.SetDataSource(Dt1Kardex)
             'totald = Math.Round(totald, 2)
             objrep.SetDataSource(dt)
+            objrep.SetParameterValue("Total", total)
             objrep.SetParameterValue("TotalBs", li)
             objrep.SetParameterValue("TotalDo", lid)
             objrep.SetParameterValue("TotalDoN", totald)
@@ -3089,6 +3093,11 @@ salirIf:
     Private Sub cbSucursal_ValueChanged(sender As Object, e As EventArgs) Handles cbSucursal.ValueChanged
         Table_Producto = Nothing
     End Sub
+
+    Private Sub LabelX8_Click(sender As Object, e As EventArgs) Handles LabelX8.Click
+
+    End Sub
+
 
 #End Region
 End Class

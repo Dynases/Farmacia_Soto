@@ -410,9 +410,11 @@ Public Class F1_Productos
     End Function
 
     Private Function quitarUltimaFilaVacia(tabla As DataTable) As DataTable
-        If (tabla.Rows(tabla.Rows.Count - 1).Item("yfadesc").ToString() = String.Empty) Then
-            tabla.Rows.RemoveAt(tabla.Rows.Count - 1)
-            tabla.AcceptChanges()
+        If tabla.Rows.Count > 0 Then
+            If (tabla.Rows(tabla.Rows.Count - 1).Item("yfadesc").ToString() = String.Empty) Then
+                tabla.Rows.RemoveAt(tabla.Rows.Count - 1)
+                tabla.AcceptChanges()
+            End If
         End If
         Return tabla
     End Function

@@ -1205,9 +1205,12 @@ salirIf:
             Else
                 If (grdetalle.GetValue("cbprven") > 0) Then
 
+                    'Dim montodesc As Double = grdetalle.GetValue("cbprven") - CType(grdetalle.DataSource, DataTable).Rows(pos).Item("cbpcost")
+                    'Dim pordesc As Double = ((montodesc * 100) / CType(grdetalle.DataSource, DataTable).Rows(pos).Item("cbpcost"))
+                    'grdetalle.SetValue("cbutven", pordesc)
 
-                    Dim montodesc As Double = grdetalle.GetValue("cbprven") - CType(grdetalle.DataSource, DataTable).Rows(pos).Item("cbpcost")
-                    Dim pordesc As Double = ((montodesc * 100) / CType(grdetalle.DataSource, DataTable).Rows(pos).Item("cbpcost"))
+                    Dim montodesc As Double = grdetalle.GetValue("cbprven") - grdetalle.GetValue("cbpcost")
+                    Dim pordesc As Double = ((montodesc * 100) / grdetalle.GetValue("cbpcost"))
                     grdetalle.SetValue("cbutven", pordesc)
 
                 Else
