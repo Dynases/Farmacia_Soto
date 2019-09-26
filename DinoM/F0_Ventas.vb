@@ -2090,20 +2090,17 @@ Public Class F0_Ventas
     Private Sub AsignarClienteVendedor()
         Dim _tabla11 As DataTable = L_fnListarClientes()
         If _tabla11.Rows.Count > 0 Then
-            tbCliente.Text = _tabla11.Rows(0).Item("yddesc")
-            _CodCliente = _tabla11.Rows(0).Item("ydnumi") 'Codigo
-            tbVendedor.Text = _tabla11.Rows(0).Item("vendedor") 'Codigo
-            _CodEmpleado = _tabla11.Rows(0).Item("ydnumivend") 'Codigo
-            'Else
-            '    Dim dt As DataTable
-            '    dt = L_fnListarClientes()
-            '    If dt.Rows.Count > 0 Then
-            '        Dim fila As DataRow() = dt.Select("ydnumi =MIN(ydnumi)")
-            '        tbCliente.Text = fila(0).ItemArray(3)
-            '        _CodCliente = fila(0).ItemArray(0)
-            '        tbVendedor.Text = fila(0).ItemArray(9)
-            '        _CodEmpleado = fila(0).ItemArray(8)
-            '    End If
+            Dim fila As DataRow() = _tabla11.Select("ydnumi =MIN(ydnumi)")
+            tbCliente.Text = fila(0).ItemArray(2)
+            _CodCliente = fila(0).ItemArray(0)
+            tbVendedor.Text = fila(0).ItemArray(9)
+            _CodEmpleado = fila(0).ItemArray(8)
+
+            'tbCliente.Text = _tabla11.Rows(0).Item("yddesc")
+            '_CodCliente = _tabla11.Rows(0).Item("ydnumi") 'Codigo
+            'tbVendedor.Text = _tabla11.Rows(0).Item("vendedor") 'Codigo
+            '_CodEmpleado = _tabla11.Rows(0).Item("ydnumivend") 'Codigo
+
         End If
     End Sub
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
